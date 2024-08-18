@@ -1,0 +1,39 @@
+﻿@model Mini_Shop.Models.User
+
+<div class="container mt-5">
+    <div class="card shadow-sm border-light">
+        <div class="card-header bg-primary text-white">
+            <h4 class="card-title mb-0">User Profile</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Username:</label>
+                        <p class="form-control-plaintext">@Model.Username</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Email:</label>
+                        <p class="form-control-plaintext">@Model.Email</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Full Name:</label>
+                        <p class="form-control-plaintext">@Model.FullName</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Address:</label>
+                        <p class="form-control-plaintext">@Model.Address</p>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold">Phone Number:</label>
+                        <p class="form-control-plaintext">@Model.PhoneNumber</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="@Url.Action("ProfileEdit", "Home")" class="btn btn-primary btn-lg">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+</div>

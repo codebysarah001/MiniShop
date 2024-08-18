@@ -1,0 +1,558 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="banner" style="background: #F9F3EC;">
+    <div class="container">
+        <div class="swiper main-swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide py-5">
+                    <div class="row banner-content align-items-center">
+                        <div class="img-wrapper col-md-5">
+                            <img src="~/Content/images/banner-img3.png" class="img-fluid">
+                        </div>
+                        <div class="content-wrapper col-md-7 p-5 mb-5">
+                            <div class="secondary-font text-primary text-uppercase mb-4">Save 10 - 20 % off</div>
+                            <h2 class="banner-title display-1 fw-normal">
+                                Best destination for <span class="text-primary">
+                                    your
+                                    pets
+                                </span>
+                            </h2>
+                            <a href="@Url.Action("Shop", "Home")" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                shop now
+                                <svg width="24" height="24" viewBox="0 0 24 24" class="mb-1">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="categories">
+    <div class="container my-3 py-5">
+        <div class="row my-5">
+            <div class="col text-center">
+                <a href="@Url.Action("FoodCategory", "Home")" class="categories-item">
+                    <iconify-icon class="category-icon" icon="ph:bowl-food"></iconify-icon>
+                    <h5>Foodies</h5>
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="@Url.Action("ToysCategory", "Home")" class="categories-item">
+                    <iconify-icon class="category-icon" icon="ph:paw-print"></iconify-icon>
+                    <h5>Toys</h5>
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="@Url.Action("AccessoriesCategory", "Home")" class="categories-item">
+                    <iconify-icon class="category-icon" icon="ph:crown"></iconify-icon>
+                    <h5>Accessories</h5>
+                </a>
+            </div>
+
+            <div class="col text-center">
+                <a href="@Url.Action("DentalCategory", "Home")" class="categories-item">
+                    <iconify-icon class="category-icon" icon="ph:tooth"></iconify-icon>
+                    <h5>Dental Care</h5>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="categories" class="my-5 overflow-hidden">
+    <div class="container pb-5">
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Pet's Food</h2>
+        </div>
+
+        <div class="row">
+            <!-- Category 1 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/PetsFood.png"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Food">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Royal Canin</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="1" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat for other products, updating the `id` parameter -->
+            <!-- Category 2 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Hill's Science Diet.jpeg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Hill's Science Diet">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Hill's Science Diet</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="2" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Category 3 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Purina Pro Plan.jpeg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Accessories">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Purina Pro Plan</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="3" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Blue Buffalo.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Dental">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Blue Buffalo</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="4" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="categories" class="my-5 overflow-hidden">
+    <div class="container pb-5">
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Pet's Accessories</h2>
+        </div>
+
+        <div class="row">
+            <!-- Category 1 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Career.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Carrier">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Cat Carrier</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="11" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Tree.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Tree">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Cat Tree</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="12" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Bed.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Bed">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Cat Bed</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="13" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Water.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Water Fountain">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Water Fountain</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="14" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="categories" class="my-5 overflow-hidden">
+    <div class="container pb-5">
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Pet's Toys</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/81CmEqBolAL.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Food">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">KONG Catnip Toy</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="7" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Category 2 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/s-l1200.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Toys">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Smart Critters</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="8" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/nv9xzc83rbx5edlaswnl__26049.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Accessories">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Petstages Tracks</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="9" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/s-l1600.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Dental">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Yeowww! Catnip</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductID" value="10" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="categories" class="my-5 overflow-hidden">
+    <div class="container pb-5">
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Pet's Dental</h2>
+        </div>
+
+        <div class="row">
+            <!-- Category 1 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Bravecto.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Food">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Bravecto Chew</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="15" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Catnip.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Toys">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Catnip Spray</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="18" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Litter.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Accessories">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Litter Deodorizer</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="19" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Zymox.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Pet Dental">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Ear Solution</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="20" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--<section id="categories" class="my-5 overflow-hidden">
+    <div class="container pb-5">
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Categories</h2>
+        </div>
+
+        <div class="row">-->
+<!-- Category 1 -->
+<!--<div class="col-md-3">
+    <div class="card position-relative">
+        <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+            <img src="~/Content/images/PetsFood.png"
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                 alt="Pet Food">
+        </div>
+        <div class="card-body text-center">
+            <h3 class="card-title pt-4 m-0">Pet Food</h3>
+            <a href="@Url.Action("FoodCategory", "Home")" class="btn btn-outline-dark btn-lg text-uppercase mt-3 fs-6 rounded-1">
+                Shop Now
+            </a>
+        </div>
+    </div>
+</div>-->
+<!-- Category 2 -->
+<!--<div class="col-md-3">
+    <div class="card position-relative">
+        <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+            <img src="~/Content/images/PetsToys.jpg"
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                 alt="Pet Toys">
+        </div>
+        <div class="card-body text-center">
+            <h3 class="card-title pt-4 m-0">Pet Toys</h3>
+            <a href="@Url.Action("ToysCategory", "Home")" class="btn btn-outline-dark btn-lg text-uppercase mt-3 fs-6 rounded-1">
+                Shop Now
+            </a>
+        </div>
+    </div>
+</div>-->
+<!-- Category 3 -->
+<!--<div class="col-md-3">
+    <div class="card position-relative">
+        <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+            <img src="~/Content/images/accessories.jpeg"
+                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                 alt="Pet Accessories">
+        </div>
+        <div class="card-body text-center">
+            <h3 class="card-title pt-4 m-0">Pet Accessories</h3>
+            <a href="@Url.Action("AccessoriesCategory", "Home")" class="btn btn-outline-dark btn-lg text-uppercase mt-3 fs-6 rounded-1">
+                Shop Now
+            </a>
+        </div>
+    </div>
+</div>-->
+<!-- Category 4 -->
+<!--<div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/dental.jpeg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 15px;"
+                             alt="Pet Dental">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Pet Dental</h3>
+                        <a href="@Url.Action("DentalCategory", "Home")" class="btn btn-outline-dark btn-lg text-uppercase mt-3 fs-6 rounded-1">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>-->

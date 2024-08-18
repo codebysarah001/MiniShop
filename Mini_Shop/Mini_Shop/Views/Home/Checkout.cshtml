@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Mini_Shop.Models.Cart>
+
+@{
+    ViewBag.Title = "Checkout";
+}
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@Url.Content(item.ImageURL)"
+                         alt="@item.ProductName"
+                         style="width: 100px; height: auto;">
+                </td>
+                <td>@item.ProductName</td>
+                <td>@item.Quantity</td>
+                <td>
+                    @String.Format("{0:C}",
+                decimal.TryParse(item.Price, out decimal price) ? price : 0)
+            </td>
+            <td>
+                @String.Format("{0:C}",
+            (item.Quantity ?? 0) *
+            (decimal.TryParse(item.Price, out decimal itemPrice) ? itemPrice : 0))
+        </td>
+    </tr>
+}
+    </tbody>
+</table>
+
+<h3>Total Amount: @String.Format("{0:C}", ViewBag.TotalAmount)</h3>
+
+<form action="@Url.Action("CompleteCheckout", "Home")" method="post">
+    <div class="form-group">
+        <label for="address">Shipping Address:</label>
+        <textarea id="address" name="address" class="form-control" rows="3" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Complete Checkout</button>
+</form>
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-secondary mt-3">Continue Shopping</a>

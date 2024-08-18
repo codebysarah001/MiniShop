@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Your Cart";
+    var cart = Session["Cart"] as Dictionary<int, (string ProductName, int Quantity, decimal Price)>;
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (cart != null && cart.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in cart)
+            {
+                var product = item.Value;
+                <tr>
+                    <td>@product.ProductName</td>
+                    <td>@product.Quantity</td>
+                    <td>@String.Format("{0:C}", product.Price)</td>
+                    <td>@String.Format("{0:C}", product.Quantity * product.Price)</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><strong>Total</strong></td>
+                <td>
+                    @String.Format("{0:C}", cart.Sum(item => item.Value.Quantity * item.Value.Price))
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}

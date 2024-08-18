@@ -1,0 +1,120 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="categories" class="my-5 overflow-hidden">
+    <div class="container pb-5">
+        <div class="section-header d-md-flex justify-content-between align-items-center mb-3">
+            <h2 class="display-3 fw-normal">Pet's Accessories</h2>
+        </div>
+
+        <div class="row">
+            <!-- Category 1 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Career.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Carrier">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Cat Carrier</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="11" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                            <a href="@Url.Action("ReadMore", "Home", new { id = 11 })" class="btn btn-outline-secondary btn-lg text-uppercase fs-6 rounded-1">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Tree.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Tree">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Cat Tree</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="12" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                            <a href="@Url.Action("ReadMore", "Home", new { id = 12 })" class="btn btn-outline-secondary btn-lg text-uppercase fs-6 rounded-1">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Bed.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Bed">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Cat Bed</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="13" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                            <a href="@Url.Action("ReadMore", "Home", new { id = 13 })" class="btn btn-outline-secondary btn-lg text-uppercase fs-6 rounded-1">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="col-md-3">
+                <div class="card position-relative">
+                    <div style="position: relative; padding-top: 75%; overflow: hidden; border-radius: 15px;">
+                        <img src="~/Content/images/Water.jpg"
+                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; border-radius: 15px;"
+                             alt="Cat Water Fountain">
+                    </div>
+                    <div class="card-body text-center">
+                        <h3 class="card-title pt-4 m-0">Water Fountain</h3>
+                        <div class="d-flex justify-content-center mt-3 gap-2">
+                            <form action="@Url.Action("AddToCart", "Home")" method="post">
+                                <input type="hidden" name="ProductId" value="14" />
+                                <input type="hidden" name="Quantity" value="1" />
+                                <button type="submit" class="btn btn-outline-dark btn-lg text-uppercase fs-6 rounded-1">
+                                    Add To Cart
+                                </button>
+                            </form>
+                            <a href="@Url.Action("ReadMore", "Home", new { id = 14 })" class="btn btn-outline-secondary btn-lg text-uppercase fs-6 rounded-1">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
